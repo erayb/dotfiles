@@ -1,0 +1,27 @@
+snippet cl "console.log()" b
+console.log(${1:${VISUAL}});${0}
+endsnippet
+
+snippet desc "describe() block;" b
+describe('${1}', function () {
+    ${0:${VISUAL}}
+});
+endsnippet
+
+snippet bef "beforeEach() block" b
+beforeEach(function () {
+    ${0:${VISUAL}}
+});
+endsnippet
+
+snippet aft "afterEach() block" b
+afterEach(function () {
+    ${0:${VISUAL}}
+});
+endsnippet
+
+snippet it "it() block" b
+it('${1}', function () {
+    ${0:${VISUAL}}
+});
+endsnippet
