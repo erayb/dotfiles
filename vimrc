@@ -23,7 +23,7 @@ set number
 set numberwidth=5
 set textwidth=80
 set colorcolumn=+1
-set guifont=Monaco:h12
+set guifont=Monaco:h14
 set t_Co=256
 syntax enable
 colorscheme solarized
@@ -53,6 +53,12 @@ set splitright
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
+" Use ag
+set grepprg=ag\ --nogroup\ --nocolor
+
+" Ag command
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
 " Config
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
 let g:ctrlp_use_caching = 0
@@ -66,4 +72,5 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-
+" bind K to grep word under cursor
+nnoremap <silent> K :grep! <cword><CR>:cw<CR>
