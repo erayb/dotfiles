@@ -16,6 +16,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\u@\h \[\033[0;36m\]\w\[\033[0m\] \[\033[1;31m\]$(__git_ps1 "%s ")\[\033[0m\]\$ '
 . ~/.git-prompt.sh
 
+_Z_CMD='j'
+. `brew --prefix`/etc/profile.d/z.sh
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
