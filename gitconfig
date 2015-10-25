@@ -33,7 +33,6 @@
   branches = branch -a
   tags = tag -l
   remotes = remote -v
-  up = fetch -p
   # Show files ignored by git:
   ign = ls-files -o -i --exclude-standard
 [push]
