@@ -57,7 +57,10 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set grepprg=ag\ --nogroup\ --nocolor
 
 " Ag command
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+" Source the vimrc file after save
+autocmd bufwritepost .vimrc source $MYVIMRC
 
 " Config
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
