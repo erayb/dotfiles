@@ -17,9 +17,11 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'groenewege/vim-less'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 set number
+set relativenumber
 set numberwidth=5
 set textwidth=80
 set colorcolumn=+1
@@ -32,6 +34,9 @@ set visualbell
 
 set hidden
 set history=1000
+set hlsearch
+set incsearch
+set ignorecase smartcase
 
 set backspace=2
 set laststatus=2
@@ -74,6 +79,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" NERD Tree toggle
+inoremap <F10> <esc>:NERDTreeToggle<cr>
+nnoremap <F10> :NERDTreeToggle<cr>
 
 " bind K to grep word under cursor
 nnoremap <silent> K :grep! <cword><CR>:cw<CR>
