@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd $(dirname $BASH_SOURCE)
+BASE=$(pwd)
+
+# Link RC files
+mkdir -pv bak
+for rc in *rc *profile *config; do
+  [ -e ~/.$rc ] && mv -v ~/.$rc bak/.$rc
+  ln -sfv $BASE/$rc ~/.$rc
+done
+
+# Install Homebrew
+[ -z "$(which brew)" ] &&
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Packages
+brew update
+brew install git bash-completion macvim the_silver_searcher vim wget z
