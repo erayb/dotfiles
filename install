@@ -3,6 +3,8 @@
 cd $(dirname $BASH_SOURCE)
 BASE=$(pwd)
 
+# swp folder
+mkdir -pv ~/.tmp
 # Link RC files
 mkdir -pv bak
 for rc in *rc *profile *config; do
