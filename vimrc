@@ -16,16 +16,18 @@ Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-surround'
 call plug#end()
 
 set number
+set cursorline
 set relativenumber
 set numberwidth=5
 set textwidth=80
 set colorcolumn=+1
-set guifont=Monaco:h14
+set guifont=Monaco\ for\ Powerline:h14
 set t_Co=256
 syntax enable
 colorscheme solarized
@@ -70,6 +72,8 @@ autocmd bufwritepost .vimrc source $MYVIMRC
 " Config
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
 let g:ctrlp_use_caching = 0
+let g:airline_powerline_fonts = 1
+let g:jsx_ext_required = 0
 
 " Leader
 let mapleader = " "
