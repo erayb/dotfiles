@@ -19,3 +19,6 @@ done
 # Packages
 brew update
 brew install git bash-completion macvim the_silver_searcher vim wget z
+
+# Config
+git config --global core.editor $(which vim)
