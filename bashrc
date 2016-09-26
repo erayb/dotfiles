@@ -9,7 +9,7 @@ alias l='ls -CFG'
 alias ls='ls -CFG'
 alias vi='vim'
 alias g='git'
-alias server='python -m SimpleHTTPServer'
+alias server='python -m SimpleHTTPServer 5555'
 alias git-purge='git fetch --all -p && git br --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d'
 
 # Headers-only curl

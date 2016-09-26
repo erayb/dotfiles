@@ -90,3 +90,7 @@ nnoremap <F10> :NERDTreeToggle<cr>
 
 " bind K to grep word under cursor
 nnoremap <silent> K :grep! <cword><CR>:cw<CR>
+" Clear highlight
+nnoremap <leader>h :noh<cr>
+" Close quickfix
+nnoremap <leader>c :ccl<cr>
