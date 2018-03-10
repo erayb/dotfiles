@@ -35,6 +35,10 @@
   remotes = remote -v
   # Show files ignored by git:
   ign = ls-files -o -i --exclude-standard
+  stsh = stash --keep-index
+  staash = stash --include-untracked
+  staaash = stash --all
+  which = !git branch | grep -i
 [push]
   default = simple
 [help]
