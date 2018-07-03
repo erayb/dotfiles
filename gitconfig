@@ -26,20 +26,26 @@
   co = checkout
   df = diff
   dc = diff --cached
-  lp = log -p
+  lg = log -p
   lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
   branches = branch -a
   tags = tag -l
   remotes = remote -v
   # Show files ignored by git:
   ign = ls-files -o -i --exclude-standard
-  stsh = stash --keep-index
   staash = stash --include-untracked
   staaash = stash --all
   which = !git branch | grep -i
   lucky = !sh -c 'git checkout $(git which $1 -m1)' -
+  wtc = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
 [push]
   default = simple
 [help]
   autocorrect = 1
+[core]
+  editor = /usr/local/bin/vim
+  autocrlf = input
+[include]
+  path = ~/.gitconfig.local

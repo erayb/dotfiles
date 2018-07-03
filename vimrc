@@ -6,6 +6,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jimmyhchan/dustjs.vim'
 Plug 'mattn/emmet-vim'
+Plug 'mhartington/oceanic-next'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
@@ -18,6 +19,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-surround'
 call plug#end()
@@ -31,8 +33,12 @@ set colorcolumn=+1
 set guifont=Monaco\ for\ Powerline:h14
 set t_Co=256
 syntax enable
-colorscheme solarized
-set background=dark
+" for vim 8
+if (has("termguicolors"))
+  set termguicolors
+endif
+colorscheme OceanicNext
+"set background=dark
 set visualbell
 
 set hidden
