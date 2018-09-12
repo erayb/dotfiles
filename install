@@ -7,7 +7,7 @@ BASE=$(pwd)
 mkdir -pv ~/.tmp
 # Link RC files
 mkdir -pv bak
-for rc in *rc *profile *config; do
+for rc in *rc *profile *config tmux.conf; do
   [ -e ~/.$rc ] && mv -v ~/.$rc bak/.$rc
   ln -sfv $BASE/$rc ~/.$rc
 done
@@ -18,7 +18,9 @@ done
 
 # Packages
 brew update
-brew install git bash-completion httpie macvim the_silver_searcher vim wget z
+brew install \
+  git bash-completion heroku httpie jq macvim python ruby the_silver_searcher \
+  tmux vim wget z
 
 # Config
 git config --global core.editor $(which vim)
