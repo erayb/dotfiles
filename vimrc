@@ -33,12 +33,14 @@ set colorcolumn=+1
 set guifont=Monaco\ for\ Powerline:h14
 set t_Co=256
 syntax enable
-" for vim 8
+
 if (has("termguicolors"))
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
 colorscheme OceanicNext
-"set background=dark
 set visualbell
 
 set hidden
