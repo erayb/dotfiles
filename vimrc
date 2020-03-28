@@ -67,7 +67,7 @@ set splitbelow
 set splitright
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+set list listchars=tab:··,trail:·,nbsp:·
 
 " Use ag
 set grepprg=ag\ --nogroup\ --nocolor
@@ -82,6 +82,7 @@ autocmd bufwritepost .vimrc source $MYVIMRC
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
 let g:ctrlp_use_caching = 0
 let g:airline_powerline_fonts = 1
+let g:airline_section_b = ''
 let g:jsx_ext_required = 0
 
 " Leader
@@ -97,9 +98,14 @@ nnoremap <C-l> <C-w>l
 inoremap <F10> <esc>:NERDTreeToggle<cr>
 nnoremap <F10> :NERDTreeToggle<cr>
 
+" CtrlP buffer
+nnoremap <silent> <C-b> :CtrlPBuffer<CR>
+
 " bind K to grep word under cursor
 nnoremap <silent> K :grep! <cword><CR>:cw<CR>
 " Clear highlight
 nnoremap <leader>h :noh<cr>
 " Close quickfix
 nnoremap <leader>c :ccl<cr>
+" Find file in NERD Tree
+nnoremap <leader>f :NERDTreeFind<cr>

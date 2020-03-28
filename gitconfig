@@ -27,6 +27,7 @@
   df = diff
   dc = diff --cached
   lg = log -p
+  pm = pull origin master
   lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
@@ -47,5 +48,6 @@
 [core]
   editor = /usr/local/bin/vim
   autocrlf = input
+  excludesfile = ~/.gitignore_global
 [include]
   path = ~/.gitconfig.local
